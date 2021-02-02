@@ -39,4 +39,16 @@ After that step, you can start redisConnection.go file:
 
     $go run redisConnection.go
 
-## I hope this repository helped to you.
+# Work with Endpoints
+
+I create some basic endpoints with net/http package. Its working on 8081 port. You can check basicRest.go file.<br/>
+I also use gorilla/mux. Package [gorilla/mux](https://github.com/gorilla/mux) implements a request router and dispatcher for matching incoming requests to their respective handler.<br/>
+Run the basicRest.go file:
+
+    $go run basicRest.go
+
+Open new terminal and test endpoints:
+
+    $ curl http://localhost:8081/  # it will return a message for every request
+    $ curl http://localhost:8081/articles # it will return a list of articles
+    $ curl -X POST http://localhost:8081/articles # it will return a message for post request.
